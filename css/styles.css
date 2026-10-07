@@ -1,40 +1,99 @@
-/* The Skin Edit — brand theme (colors from the brand board) */
+/* The Skin Edit — Sephora-style theme with brand colors */
 :root {
-  --black: #0d0d0d;
+  --black: #000000;
+  --white: #ffffff;
   --cream: #f4ede3;
-  --taupe: #c8b6a4;
+  --grey: #f6f6f8;
+  --border: #e5e5e5;
   --gold: #a8845a;
-  --stripe: repeating-linear-gradient(90deg, var(--black) 0 28px, var(--cream) 28px 56px);
+  --stripe: repeating-linear-gradient(90deg, var(--black) 0 40px, var(--white) 40px 80px);
+  --font: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font); background: var(--white); color: var(--black); min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; display: flex; flex-direction: column; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
 
-body {
-  background: var(--cream);
-  color: var(--black);
+.container { width: min(1280px, 100% - 32px); margin-inline: auto; }
+
+/* Promo bar */
+.promo {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 10px 16px;
 }
 
-/* Black-and-cream stripes at the top and bottom of the page */
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 18px;
+/* Header */
+.header { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
+.header-row { display: flex; align-items: center; gap: 32px; padding: 16px 0; }
+.logo img { height: 56px; width: auto; }
+
+.search {
+  flex: 1;
+  max-width: 520px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--grey);
+  border-radius: 999px;
+  padding: 0 18px;
+}
+.search input { flex: 1; border: 0; background: none; font: inherit; font-size: 0.9rem; padding: 12px 0; outline: none; }
+
+svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.search svg { width: 18px; height: 18px; color: #666; }
+
+.icons { display: flex; align-items: center; gap: 22px; margin-left: auto; }
+.icon-link { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; font-weight: 600; }
+.icon-link:hover { color: var(--gold); }
+
+/* Category nav */
+.categories { border-top: 1px solid var(--border); }
+.categories-row { display: flex; justify-content: center; gap: 36px; overflow-x: auto; scrollbar-width: none; }
+.categories-row::-webkit-scrollbar { display: none; }
+.categories a {
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 14px 0;
+  border-bottom: 3px solid transparent;
+}
+.categories a:hover { border-bottom-color: var(--black); }
+
+/* Striped banner */
+.banner {
+  flex: 1;
   background: var(--stripe);
-}
-body::before { top: 0; }
-body::after { bottom: 0; }
-
-.page {
-  min-height: 100vh;
+  background-position: center;
+  padding: 90px 16px;
   display: grid;
   place-items: center;
-  padding: 40px 16px;
+}
+.banner-box {
+  background: var(--cream);
+  border: 1px solid var(--black);
+  outline: 14px solid var(--cream);
+  padding: 48px 56px;
+  width: min(620px, 100%);
 }
 
-.logo {
-  width: min(640px, 90vw);
-  height: auto;
+/* Footer */
+.footer { background: var(--black); padding: 48px 0; }
+.footer-logo { height: 70px; width: auto; margin: 0 auto; }
+
+/* Mobile */
+@media (max-width: 760px) {
+  .header-row { flex-wrap: wrap; gap: 12px 16px; padding: 12px 0; }
+  .logo img { height: 42px; }
+  .icon-link span { display: none; }
+  .search { order: 3; flex-basis: 100%; max-width: none; }
+  .categories-row { justify-content: flex-start; gap: 24px; }
+  .banner { padding: 50px 16px; }
+  .banner-box { padding: 28px 24px; outline-width: 8px; width: calc(100% - 16px); }
 }

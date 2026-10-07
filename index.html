@@ -4,11 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Skin Edit — by Empress Beauty Box</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <main class="page">
-    <img src="images/logo.png" alt="The Skin Edit by Empress Beauty Box" class="logo" />
+
+  <!-- Top promo bar -->
+  <div class="promo">Coming Soon to Pakistan</div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-row">
+      <a href="#" class="logo"><img src="images/logo.png" alt="The Skin Edit by Empress Beauty Box" /></a>
+
+      <form class="search" role="search" onsubmit="return false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></svg>
+        <input type="search" placeholder="Search" aria-label="Search" />
+      </form>
+
+      <nav class="icons">
+        <a href="#" class="icon-link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4 4-6 8-6s8 2 8 6" /></svg>
+          <span>Sign In</span>
+        </a>
+        <a href="#" class="icon-link" aria-label="Loves">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" /></svg>
+        </a>
+        <a href="#" class="icon-link" aria-label="Basket">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z" /><path d="M9 8V6a3 3 0 0 1 6 0v2" /></svg>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Category navigation -->
+    <nav class="categories">
+      <div class="container categories-row">
+        <a href="#">Brightening &amp; Glowing</a>
+        <a href="#">Glass Skin</a>
+        <a href="#">Hydrating</a>
+        <a href="#">Anti-Aging</a>
+        <a href="#">Acne</a>
+        <a href="#">Sunscreen</a>
+        <a href="#">Dry Skin</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Striped banner with logo -->
+    <section class="banner">
+      <div class="banner-box">
+        <img src="images/logo.png" alt="The Skin Edit by Empress Beauty Box" />
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <img src="images/logo-light.png" alt="The Skin Edit by Empress Beauty Box" class="footer-logo" />
+    </div>
+  </footer>
+
 </body>
 </html>
