@@ -8,18 +8,28 @@
   <link rel="icon" href="images/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600;700;800&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <!-- ===== Scrolling top bar ===== -->
-  <div class="promo" aria-label="Coming soon to Pakistan">
+  <!-- ===== Scrolling top bar: our ranges ===== -->
+  <div class="promo" aria-label="Our ranges, coming soon">
     <div class="promo-track">
-      <span>Coming Soon</span><b>✿</b><span>First Time in Pakistan</span><b>✿</b>
-      <span>100% Authentic Sellers</span><b>✿</b><span>Korea → Canada → Pakistan</span><b>✿</b>
-      <span>Coming Soon</span><b>✿</b><span>First Time in Pakistan</span><b>✿</b>
-      <span>100% Authentic Sellers</span><b>✿</b><span>Korea → Canada → Pakistan</span><b>✿</b>
+      <span>Coming Soon · 출시 예정</span><b>✿</b>
+      <span>Brightening &amp; Glowing · 브라이트닝</span><b>✿</b>
+      <span>Hydrating · 수분</span><b>✿</b>
+      <span>Acne · 트러블 케어</span><b>✿</b>
+      <span>Sensitive Skin · 민감 피부</span><b>✿</b>
+      <span>Dry Skin · 건성 피부</span><b>✿</b>
+      <span>Sunscreen · 선크림</span><b>✿</b>
+      <span>Coming Soon · 출시 예정</span><b>✿</b>
+      <span>Brightening &amp; Glowing · 브라이트닝</span><b>✿</b>
+      <span>Hydrating · 수분</span><b>✿</b>
+      <span>Acne · 트러블 케어</span><b>✿</b>
+      <span>Sensitive Skin · 민감 피부</span><b>✿</b>
+      <span>Dry Skin · 건성 피부</span><b>✿</b>
+      <span>Sunscreen · 선크림</span><b>✿</b>
     </div>
   </div>
 
@@ -27,12 +37,12 @@
   <header class="header" id="top">
     <div class="container header-row">
       <nav class="nav nav-left">
+        <a href="#ranges">Our Ranges</a>
         <a href="#promise">Our Promise</a>
-        <a href="#journey">The Journey</a>
       </nav>
       <a href="#top" class="logo"><img src="images/logo.png" alt="The Skin Edit by Empress Beauty Box" /></a>
       <nav class="nav nav-right">
-        <a href="#why">Why Us</a>
+        <a href="#journey">The Journey</a>
         <a href="#launch" class="nav-pill">Coming Soon</a>
       </nav>
     </div>
@@ -41,27 +51,34 @@
   <main>
     <!-- ===== Hero banner ===== -->
     <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-kr" aria-hidden="true">한국 뷰티</div>
       <div class="petals" aria-hidden="true">
         <span></span><span></span><span></span><span></span><span></span><span></span>
         <span></span><span></span><span></span><span></span><span></span><span></span>
       </div>
       <div class="container hero-grid">
         <div class="hero-text">
-          <p class="tag">✿ First Time in Pakistan</p>
-          <h1>K-Beauty.<br />Finally in <span>Pakistan.</span></h1>
-          <p class="hero-sub">
+          <p class="tag intro" style="--d: 0.1s">✿ First Time in Pakistan · <span lang="ko">파키스탄 최초</span></p>
+          <h1>
+            <span class="line intro" style="--d: 0.25s">K-Beauty.</span>
+            <span class="line intro" style="--d: 0.4s">Finally in</span>
+            <span class="line intro shimmer" style="--d: 0.55s">Pakistan.</span>
+          </h1>
+          <p class="hero-sub intro" style="--d: 0.7s">
             100% authentic Korean skincare from Korea, through Canada, to Pakistan.
             Brought to you by <strong>Empress Beauty Box, Canada</strong>.
           </p>
-          <div class="hero-actions">
-            <a href="#promise" class="btn">Discover Our Promise</a>
+          <div class="hero-actions intro" style="--d: 0.85s">
+            <a href="#ranges" class="btn">Explore Our Ranges</a>
             <a href="#journey" class="btn btn-outline">See the Journey</a>
           </div>
-          <div class="soon-badge">
-            <span class="dot"></span> Coming Soon
+          <div class="soon-badge intro" style="--d: 1s">
+            <span class="dot"></span> Coming Soon · <span lang="ko">곧 만나요</span>
           </div>
         </div>
-        <div class="hero-art">
+        <div class="hero-art intro" style="--d: 0.4s">
+          <div class="float">
         <svg viewBox="0 0 400 600" role="img" aria-label="Illustration of a Korean girl in a hanbok under cherry blossoms">
           <defs>
             <g id="blossom">
@@ -155,7 +172,7 @@
           <path d="M192 174 q8 6 16 0 q-8 3 -16 0 Z" fill="#d9557a" />
 
           <!-- sakura branch -->
-          <g>
+          <g class="branch">
             <path d="M400 20 C340 30 300 22 250 10 M330 26 C320 60 300 80 270 96 M400 120 C370 112 352 96 340 74"
                   stroke="#5b3a33" stroke-width="6" fill="none" stroke-linecap="round" />
             <path d="M0 60 C40 70 70 62 100 40 M60 66 C70 92 64 114 50 130"
@@ -176,53 +193,138 @@
             <use href="#blossom" transform="translate(48 132) scale(0.85)" />
           </g>
         </svg>
+          </div>
         </div>
       </div>
+      <a href="#why" class="scroll-hint" aria-label="Scroll down"><span></span></a>
     </section>
 
     <!-- ===== Trust bar ===== -->
     <section class="trust" id="why">
       <div class="container trust-grid">
-        <div class="trust-item">
+        <div class="trust-item reveal">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z" /><path d="M9 12l2 2 4-4" /></svg>
-          <div><strong>100% Authentic</strong><span>Genuine products only</span></div>
+          <div><strong>100% Authentic</strong><span lang="ko">100% 정품</span></div>
         </div>
-        <div class="trust-item">
+        <div class="trust-item reveal">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M5 21c0-4 3-6 7-6s7 2 7 6" /><path d="M16 4l1.5 1.5L20 3" /></svg>
           <div><strong>Verified Sellers</strong><span>Trusted sources only</span></div>
         </div>
-        <div class="trust-item">
+        <div class="trust-item reveal">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 16l20-6-20-6 4 6-4 6z" /><path d="M6 10h8" /></svg>
           <div><strong>Canada to Pakistan</strong><span>Shipped straight to you</span></div>
         </div>
-        <div class="trust-item">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7a2.5 2.5 0 0 1 0 5 2.5 2.5 0 0 0 0 5" /></svg>
-          <div><strong>Made in Korea</strong><span>Real K-beauty</span></div>
+        <div class="trust-item reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-4-6-10a6 6 0 0 1 12 0c0 6-6 10-6 10z" /><circle cx="12" cy="11" r="2" /></svg>
+          <div><strong>From Korea</strong><span lang="ko">한국에서 직접</span></div>
         </div>
       </div>
     </section>
 
+    <!-- ===== Our ranges (coming soon) ===== -->
+    <section class="section ranges" id="ranges">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Our Ranges · <span lang="ko">라인업</span></p>
+          <h2>Skincare for <em>every</em> skin.</h2>
+          <p>Six curated K-beauty ranges, launching soon in Pakistan.</p>
+        </div>
+
+        <div class="range-grid">
+          <article class="range-card reveal">
+            <span class="range-kr" lang="ko">광채</span>
+            <svg class="range-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1" /></svg>
+            <span class="range-num">01</span>
+            <h3>Brightening &amp; Glowing</h3>
+            <p class="range-ko" lang="ko">브라이트닝 · 글로우</p>
+            <span class="range-soon">Coming Soon</span>
+          </article>
+          <article class="range-card reveal">
+            <span class="range-kr" lang="ko">수분</span>
+            <svg class="range-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z" /><path d="M9 14a3 3 0 0 0 3 3" /></svg>
+            <span class="range-num">02</span>
+            <h3>Hydrating</h3>
+            <p class="range-ko" lang="ko">수분 · 보습</p>
+            <span class="range-soon">Coming Soon</span>
+          </article>
+          <article class="range-card reveal">
+            <span class="range-kr" lang="ko">진정</span>
+            <svg class="range-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z" /><path d="M5 19l8-8" /></svg>
+            <span class="range-num">03</span>
+            <h3>Acne Care</h3>
+            <p class="range-ko" lang="ko">트러블 케어</p>
+            <span class="range-soon">Coming Soon</span>
+          </article>
+          <article class="range-card reveal">
+            <span class="range-kr" lang="ko">민감</span>
+            <svg class="range-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" /></svg>
+            <span class="range-num">04</span>
+            <h3>Sensitive Skin</h3>
+            <p class="range-ko" lang="ko">민감 피부</p>
+            <span class="range-soon">Coming Soon</span>
+          </article>
+          <article class="range-card reveal">
+            <span class="range-kr" lang="ko">영양</span>
+            <svg class="range-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="12" height="4" rx="1" /><path d="M7 8h10v11a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V8z" /><path d="M10 13h4" /></svg>
+            <span class="range-num">05</span>
+            <h3>Dry Skin</h3>
+            <p class="range-ko" lang="ko">건성 피부</p>
+            <span class="range-soon">Coming Soon</span>
+          </article>
+          <article class="range-card reveal">
+            <span class="range-kr" lang="ko">자외선</span>
+            <svg class="range-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18a8 8 0 0 1 16 0" /><path d="M12 6V3M5.6 8.6L3.5 6.5M18.4 8.6l2.1-2.1M2 18h20" /></svg>
+            <span class="range-num">06</span>
+            <h3>Sunscreen</h3>
+            <p class="range-ko" lang="ko">선크림 · 자외선 차단</p>
+            <span class="range-soon">Coming Soon</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Big moving text band ===== -->
+    <div class="band" aria-hidden="true">
+      <div class="band-track">
+        <span>Brightening</span><i>✿</i><span class="ko">광채</span><i>✿</i>
+        <span>Hydrating</span><i>✿</i><span class="ko">수분</span><i>✿</i>
+        <span>Acne</span><i>✿</i><span class="ko">진정</span><i>✿</i>
+        <span>Sensitive</span><i>✿</i><span class="ko">민감</span><i>✿</i>
+        <span>Dry Skin</span><i>✿</i><span class="ko">영양</span><i>✿</i>
+        <span>Sunscreen</span><i>✿</i><span class="ko">자외선</span><i>✿</i>
+        <span>Brightening</span><i>✿</i><span class="ko">광채</span><i>✿</i>
+        <span>Hydrating</span><i>✿</i><span class="ko">수분</span><i>✿</i>
+        <span>Acne</span><i>✿</i><span class="ko">진정</span><i>✿</i>
+        <span>Sensitive</span><i>✿</i><span class="ko">민감</span><i>✿</i>
+        <span>Dry Skin</span><i>✿</i><span class="ko">영양</span><i>✿</i>
+        <span>Sunscreen</span><i>✿</i><span class="ko">자외선</span><i>✿</i>
+      </div>
+    </div>
+
     <!-- ===== Promise ===== -->
     <section class="section" id="promise">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">The Skin Edit Promise</p>
+        <div class="section-head reveal">
+          <p class="eyebrow">The Skin Edit Promise · <span lang="ko">약속</span></p>
           <h2>Beauty you can <em>trust</em>.</h2>
           <p>We built The Skin Edit so Pakistan can shop real Korean beauty with total confidence.</p>
         </div>
         <div class="promise-grid">
-          <article class="promise-card">
+          <article class="promise-card reveal">
             <span class="promise-num">01</span>
+            <p class="promise-kr" lang="ko">100% 정품</p>
             <h3>100% Authentic Sellers</h3>
-            <p>Every product comes from trusted, verified sellers. No copies, no fakes, no grey market — ever.</p>
+            <p>Every product comes from trusted, verified sellers. Only genuine products.</p>
           </article>
-          <article class="promise-card dark">
+          <article class="promise-card dark reveal">
             <span class="promise-num">02</span>
+            <p class="promise-kr" lang="ko">캐나다에서 파키스탄으로</p>
             <h3>Straight from Canada to Pakistan</h3>
-            <p>Hand-picked and shipped by Empress Beauty Box in Canada, directly to customers in Pakistan.</p>
+            <p>Shipped by Empress Beauty Box in Canada, directly to customers in Pakistan.</p>
           </article>
-          <article class="promise-card">
+          <article class="promise-card reveal">
             <span class="promise-num">03</span>
+            <p class="promise-kr" lang="ko">한국 화장품</p>
             <h3>Korean Products, From Korea</h3>
             <p>Real K-beauty, sourced in Korea, brought through Canada and delivered to your door.</p>
           </article>
@@ -233,25 +335,28 @@
     <!-- ===== Journey ===== -->
     <section class="journey" id="journey">
       <div class="container">
-        <div class="section-head light">
-          <p class="eyebrow">The Journey</p>
+        <div class="section-head light reveal">
+          <p class="eyebrow">The Journey · <span lang="ko">여정</span></p>
           <h2>From Korea to your shelf.</h2>
         </div>
         <ol class="route">
-          <li>
-            <span class="route-step">Step 1</span>
+          <li class="reveal">
+            <span class="route-step">01</span>
+            <p class="route-kr" lang="ko">한국</p>
             <h3>Korea</h3>
             <p>Authentic K-beauty, sourced at the origin.</p>
           </li>
-          <li>
-            <span class="route-step">Step 2</span>
+          <li class="reveal">
+            <span class="route-step">02</span>
+            <p class="route-kr" lang="ko">캐나다</p>
             <h3>Canada</h3>
-            <p>Checked and packed by Empress Beauty Box.</p>
+            <p>Through Empress Beauty Box, Canada.</p>
           </li>
-          <li class="final">
-            <span class="route-step">Step 3</span>
+          <li class="final reveal">
+            <span class="route-step">03</span>
+            <p class="route-kr" lang="ko">파키스탄</p>
             <h3>Pakistan</h3>
-            <p>Delivered to you — for the first time.</p>
+            <p>Delivered to you, for the first time.</p>
           </li>
         </ol>
       </div>
@@ -259,11 +364,12 @@
 
     <!-- ===== Coming soon banner ===== -->
     <section class="launch" id="launch">
-      <div class="launch-box">
-        <p class="eyebrow">곧 만나요 · See you soon</p>
+      <div class="launch-box reveal">
+        <p class="eyebrow" lang="ko">곧 만나요 · See you soon</p>
         <img src="images/logo.png" alt="The Skin Edit by Empress Beauty Box" />
         <h2>Coming Soon</h2>
         <p class="launch-sub">For the first time in Pakistan</p>
+        <p class="launch-kr" lang="ko">파키스탄 최초 · 100% 정품 한국 화장품</p>
       </div>
     </section>
   </main>
@@ -273,15 +379,15 @@
     <div class="container footer-inner">
       <img src="images/logo-light.png" alt="The Skin Edit by Empress Beauty Box" class="footer-logo" />
       <nav class="footer-links">
+        <a href="#ranges">Our Ranges</a>
         <a href="#promise">Our Promise</a>
         <a href="#journey">The Journey</a>
-        <a href="#why">Why Us</a>
       </nav>
       <p>100% Authentic · Korea → Canada → Pakistan</p>
       <p class="copy">© <span id="year"></span> The Skin Edit by Empress Beauty Box, Canada</p>
     </div>
   </footer>
 
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/script.js"></script>
 </body>
 </html>
