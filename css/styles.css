@@ -53,19 +53,6 @@ svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width:
 .icon-link { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; font-weight: 600; }
 .icon-link:hover { color: var(--gold); }
 
-/* Category nav */
-.categories { border-top: 1px solid var(--border); }
-.categories-row { display: flex; justify-content: center; gap: 36px; overflow-x: auto; scrollbar-width: none; }
-.categories-row::-webkit-scrollbar { display: none; }
-.categories a {
-  font-size: 0.85rem;
-  font-weight: 700;
-  white-space: nowrap;
-  padding: 14px 0;
-  border-bottom: 3px solid transparent;
-}
-.categories a:hover { border-bottom-color: var(--black); }
-
 /* Striped banner */
 .banner {
   flex: 1;
@@ -93,7 +80,6 @@ svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width:
   .logo img { height: 42px; }
   .icon-link span { display: none; }
   .search { order: 3; flex-basis: 100%; max-width: none; }
-  .categories-row { justify-content: flex-start; gap: 24px; }
   .banner { padding: 50px 16px; }
   .banner-box { padding: 28px 24px; outline-width: 8px; width: calc(100% - 16px); }
 }
