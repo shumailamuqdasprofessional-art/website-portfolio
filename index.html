@@ -19,19 +19,38 @@
     <span></span><span></span><span></span><span></span>
   </div>
 
-  <main class="page">
-    <img src="images/logo.png" alt="The Skin Edit by Empress Beauty Box" class="logo" />
+  <!-- Top bar -->
+  <div class="promo">Coming Soon &nbsp;·&nbsp; First Time in Pakistan</div>
 
+  <header class="header">
+    <img src="images/logo.png" alt="The Skin Edit by Empress Beauty Box" class="logo" />
+  </header>
+
+  <main class="page">
     <div class="content">
       <div class="text">
-        <p class="korean" lang="ko">곧 만나요</p>
+        <p class="korean" lang="ko">곧 만나요 &nbsp;·&nbsp; See you soon</p>
         <h1>Coming Soon</h1>
-        <p class="first">First Time in Pakistan</p>
-        <div class="divider"><span>✿</span></div>
+        <p class="first">For the first time in Pakistan</p>
+
         <ul class="points">
-          <li>100% Authentic Products</li>
-          <li>Korean Beauty in Pakistan</li>
+          <li>
+            <span class="num">01</span>
+            <div><strong>100% Authentic Sellers</strong><p>Only genuine products from trusted, verified sellers.</p></div>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <div><strong>Straight from Canada to Pakistan</strong><p>Shipped direct by Empress Beauty Box, Canada.</p></div>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <div><strong>Korean Beauty, Delivered</strong><p>K-beauty sourced in Korea, brought through Canada, to your door in Pakistan.</p></div>
+          </li>
         </ul>
+
+        <div class="route" aria-label="Korea to Canada to Pakistan">
+          <span>Korea</span><i></i><span>Canada</span><i></i><span>Pakistan</span>
+        </div>
       </div>
 
       <!-- Illustration: girl in hanbok under sakura -->
@@ -59,8 +78,13 @@
             </linearGradient>
           </defs>
 
-          <!-- soft circle behind her -->
-          <circle cx="200" cy="270" r="170" fill="#fbe7ec" />
+          <!-- Sephora-style striped circle behind her -->
+          <pattern id="stripes" width="28" height="28" patternUnits="userSpaceOnUse">
+            <rect width="28" height="28" fill="#ffffff" />
+            <rect width="14" height="28" fill="#0d0d0d" />
+          </pattern>
+          <circle cx="200" cy="270" r="170" fill="url(#stripes)" />
+          <circle cx="200" cy="270" r="170" fill="none" stroke="#0d0d0d" stroke-width="3" />
 
           <!-- chima (skirt) -->
           <path d="M150 292 C130 380 100 480 78 590 L322 590 C300 480 270 380 250 292 Z" fill="url(#skirt)" />
