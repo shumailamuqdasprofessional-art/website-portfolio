@@ -3,58 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Skin Edit — Coming Soon to Pakistan</title>
-  <meta name="description" content="The Skin Edit by Empress Beauty Box — coming soon. First time in Pakistan: 100% authentic Korean beauty products." />
+  <title>The Skin Edit — K-Beauty, Coming Soon to Pakistan</title>
+  <meta name="description" content="The Skin Edit by Empress Beauty Box — 100% authentic Korean beauty, straight from Canada to Pakistan. Coming soon, for the first time in Pakistan." />
+  <link rel="icon" href="images/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <!-- Falling sakura petals -->
-  <div class="petals" aria-hidden="true">
-    <span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span>
+  <!-- ===== Scrolling top bar ===== -->
+  <div class="promo" aria-label="Coming soon to Pakistan">
+    <div class="promo-track">
+      <span>Coming Soon</span><b>✿</b><span>First Time in Pakistan</span><b>✿</b>
+      <span>100% Authentic Sellers</span><b>✿</b><span>Korea → Canada → Pakistan</span><b>✿</b>
+      <span>Coming Soon</span><b>✿</b><span>First Time in Pakistan</span><b>✿</b>
+      <span>100% Authentic Sellers</span><b>✿</b><span>Korea → Canada → Pakistan</span><b>✿</b>
+    </div>
   </div>
 
-  <!-- Top bar -->
-  <div class="promo">Coming Soon &nbsp;·&nbsp; First Time in Pakistan</div>
-
-  <header class="header">
-    <img src="images/logo.png" alt="The Skin Edit by Empress Beauty Box" class="logo" />
+  <!-- ===== Header ===== -->
+  <header class="header" id="top">
+    <div class="container header-row">
+      <nav class="nav nav-left">
+        <a href="#promise">Our Promise</a>
+        <a href="#journey">The Journey</a>
+      </nav>
+      <a href="#top" class="logo"><img src="images/logo.png" alt="The Skin Edit by Empress Beauty Box" /></a>
+      <nav class="nav nav-right">
+        <a href="#why">Why Us</a>
+        <a href="#launch" class="nav-pill">Coming Soon</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="page">
-    <div class="content">
-      <div class="text">
-        <p class="korean" lang="ko">곧 만나요 &nbsp;·&nbsp; See you soon</p>
-        <h1>Coming Soon</h1>
-        <p class="first">For the first time in Pakistan</p>
-
-        <ul class="points">
-          <li>
-            <span class="num">01</span>
-            <div><strong>100% Authentic Sellers</strong><p>Only genuine products from trusted, verified sellers.</p></div>
-          </li>
-          <li>
-            <span class="num">02</span>
-            <div><strong>Straight from Canada to Pakistan</strong><p>Shipped direct by Empress Beauty Box, Canada.</p></div>
-          </li>
-          <li>
-            <span class="num">03</span>
-            <div><strong>Korean Beauty, Delivered</strong><p>K-beauty sourced in Korea, brought through Canada, to your door in Pakistan.</p></div>
-          </li>
-        </ul>
-
-        <div class="route" aria-label="Korea to Canada to Pakistan">
-          <span>Korea</span><i></i><span>Canada</span><i></i><span>Pakistan</span>
-        </div>
+  <main>
+    <!-- ===== Hero banner ===== -->
+    <section class="hero">
+      <div class="petals" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
       </div>
-
-      <!-- Illustration: girl in hanbok under sakura -->
-      <div class="art">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="tag">✿ First Time in Pakistan</p>
+          <h1>K-Beauty.<br />Finally in <span>Pakistan.</span></h1>
+          <p class="hero-sub">
+            100% authentic Korean skincare from Korea, through Canada, to Pakistan.
+            Brought to you by <strong>Empress Beauty Box, Canada</strong>.
+          </p>
+          <div class="hero-actions">
+            <a href="#promise" class="btn">Discover Our Promise</a>
+            <a href="#journey" class="btn btn-outline">See the Journey</a>
+          </div>
+          <div class="soon-badge">
+            <span class="dot"></span> Coming Soon
+          </div>
+        </div>
+        <div class="hero-art">
         <svg viewBox="0 0 400 600" role="img" aria-label="Illustration of a Korean girl in a hanbok under cherry blossoms">
           <defs>
             <g id="blossom">
@@ -169,9 +176,112 @@
             <use href="#blossom" transform="translate(48 132) scale(0.85)" />
           </g>
         </svg>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- ===== Trust bar ===== -->
+    <section class="trust" id="why">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z" /><path d="M9 12l2 2 4-4" /></svg>
+          <div><strong>100% Authentic</strong><span>Genuine products only</span></div>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M5 21c0-4 3-6 7-6s7 2 7 6" /><path d="M16 4l1.5 1.5L20 3" /></svg>
+          <div><strong>Verified Sellers</strong><span>Trusted sources only</span></div>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 16l20-6-20-6 4 6-4 6z" /><path d="M6 10h8" /></svg>
+          <div><strong>Canada to Pakistan</strong><span>Shipped straight to you</span></div>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7a2.5 2.5 0 0 1 0 5 2.5 2.5 0 0 0 0 5" /></svg>
+          <div><strong>Made in Korea</strong><span>Real K-beauty</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Promise ===== -->
+    <section class="section" id="promise">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">The Skin Edit Promise</p>
+          <h2>Beauty you can <em>trust</em>.</h2>
+          <p>We built The Skin Edit so Pakistan can shop real Korean beauty with total confidence.</p>
+        </div>
+        <div class="promise-grid">
+          <article class="promise-card">
+            <span class="promise-num">01</span>
+            <h3>100% Authentic Sellers</h3>
+            <p>Every product comes from trusted, verified sellers. No copies, no fakes, no grey market — ever.</p>
+          </article>
+          <article class="promise-card dark">
+            <span class="promise-num">02</span>
+            <h3>Straight from Canada to Pakistan</h3>
+            <p>Hand-picked and shipped by Empress Beauty Box in Canada, directly to customers in Pakistan.</p>
+          </article>
+          <article class="promise-card">
+            <span class="promise-num">03</span>
+            <h3>Korean Products, From Korea</h3>
+            <p>Real K-beauty, sourced in Korea, brought through Canada and delivered to your door.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Journey ===== -->
+    <section class="journey" id="journey">
+      <div class="container">
+        <div class="section-head light">
+          <p class="eyebrow">The Journey</p>
+          <h2>From Korea to your shelf.</h2>
+        </div>
+        <ol class="route">
+          <li>
+            <span class="route-step">Step 1</span>
+            <h3>Korea</h3>
+            <p>Authentic K-beauty, sourced at the origin.</p>
+          </li>
+          <li>
+            <span class="route-step">Step 2</span>
+            <h3>Canada</h3>
+            <p>Checked and packed by Empress Beauty Box.</p>
+          </li>
+          <li class="final">
+            <span class="route-step">Step 3</span>
+            <h3>Pakistan</h3>
+            <p>Delivered to you — for the first time.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Coming soon banner ===== -->
+    <section class="launch" id="launch">
+      <div class="launch-box">
+        <p class="eyebrow">곧 만나요 · See you soon</p>
+        <img src="images/logo.png" alt="The Skin Edit by Empress Beauty Box" />
+        <h2>Coming Soon</h2>
+        <p class="launch-sub">For the first time in Pakistan</p>
+      </div>
+    </section>
   </main>
 
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="images/logo-light.png" alt="The Skin Edit by Empress Beauty Box" class="footer-logo" />
+      <nav class="footer-links">
+        <a href="#promise">Our Promise</a>
+        <a href="#journey">The Journey</a>
+        <a href="#why">Why Us</a>
+      </nav>
+      <p>100% Authentic · Korea → Canada → Pakistan</p>
+      <p class="copy">© <span id="year"></span> The Skin Edit by Empress Beauty Box, Canada</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
