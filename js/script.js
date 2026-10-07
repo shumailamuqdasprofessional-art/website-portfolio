@@ -32,15 +32,26 @@ document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el))
 
 // Draw the journey line when it comes into view
 const route = document.querySelector(".route");
-new IntersectionObserver(
-  ([entry], obs) => {
-    if (entry.isIntersecting) {
-      route.classList.add("drawn");
-      obs.disconnect();
-    }
-  },
-  { threshold: 0.3 }
-).observe(route);
+if (route) {
+  new IntersectionObserver(
+    ([entry], obs) => {
+      if (entry.isIntersecting) {
+        route.classList.add("drawn");
+        obs.disconnect();
+      }
+    },
+    { threshold: 0.3 }
+  ).observe(route);
+}
+
+// Mobile menu
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+menuBtn.addEventListener("click", () => {
+  const open = mobileMenu.classList.toggle("open");
+  menuBtn.classList.toggle("open", open);
+  menuBtn.setAttribute("aria-expanded", open);
+});
 
 // Subtle tilt on range cards following the mouse (desktop only)
 if (window.matchMedia("(hover: hover) and (prefers-reduced-motion: no-preference)").matches) {
