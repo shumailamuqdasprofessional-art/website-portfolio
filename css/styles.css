@@ -1,0 +1,40 @@
+/* The Skin Edit — brand theme (colors from the brand board) */
+:root {
+  --black: #0d0d0d;
+  --cream: #f4ede3;
+  --taupe: #c8b6a4;
+  --gold: #a8845a;
+  --stripe: repeating-linear-gradient(90deg, var(--black) 0 28px, var(--cream) 28px 56px);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--cream);
+  color: var(--black);
+}
+
+/* Black-and-cream stripes at the top and bottom of the page */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background: var(--stripe);
+}
+body::before { top: 0; }
+body::after { bottom: 0; }
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px 16px;
+}
+
+.logo {
+  width: min(640px, 90vw);
+  height: auto;
+}
