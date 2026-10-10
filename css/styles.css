@@ -103,7 +103,7 @@ h2 em { font-family: var(--font-head); font-style: italic; font-weight: 500; tex
   animation: shimmer 4s linear infinite; padding-right: 0.1em;
 }
 @keyframes shimmer { from { background-position: 100% 0; } to { background-position: -150% 0; } }
-.hero-sub { font-size: 1.05rem; color: var(--grey); max-width: 520px; margin: 22px 0 30px; }
+.hero-sub { font-size: 1.05rem; color: var(--grey); max-width: 520px; margin: 26px 0 34px; }
 .hero-sub strong { color: var(--black); }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .soon-badge { display: inline-flex; align-items: center; gap: 10px; margin-top: 34px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; }
@@ -550,106 +550,3 @@ h2 em { font-family: var(--font-head); font-style: italic; font-weight: 500; tex
 .hero-page .hero-art svg:not(.seal-ring) { max-width: 420px; }
 .hero-page .hero-sub strong { color: var(--black); }
 
-
-/* ==========================================================
-   Cute touches: soft sakura pink, rounded shapes, playful motion, stickers
-   ========================================================== */
-:root {
-  --pink: #f4a7bb;
-  --pink-deep: #e57f9c;
-  --pink-soft: #fdecf1;
-  --blossom: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20fill%3D%22%23f7c6d3%22%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%226.5%22%20rx%3D%223.6%22%20ry%3D%225.2%22%20transform%3D%22rotate%280%2012%2012%29%22/%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%226.5%22%20rx%3D%223.6%22%20ry%3D%225.2%22%20transform%3D%22rotate%2872%2012%2012%29%22/%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%226.5%22%20rx%3D%223.6%22%20ry%3D%225.2%22%20transform%3D%22rotate%28144%2012%2012%29%22/%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%226.5%22%20rx%3D%223.6%22%20ry%3D%225.2%22%20transform%3D%22rotate%28216%2012%2012%29%22/%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%226.5%22%20rx%3D%223.6%22%20ry%3D%225.2%22%20transform%3D%22rotate%28288%2012%2012%29%22/%3E%3C/g%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%222.6%22%20fill%3D%22%23e889a3%22/%3E%3C/svg%3E");
-  --radius: 22px;
-}
-
-/* Rounded, softer shapes */
-.btn, .nav-pill, .range-soon, .route-step { border-radius: 999px; }
-.range-card, .promise-card, .contact-card, .range-visual, .where-card { border-radius: var(--radius); overflow: hidden; }
-.launch-box { border-radius: 28px; }
-.trust-item svg { padding: 6px; border-radius: 50%; background: var(--pink-soft); width: 46px; height: 46px; }
-.hero-frame, .best-for li, .welcome-points li { border-radius: 999px; }
-
-/* Soft sakura pink accents */
-.section-head .eyebrow::before,
-.section-head .eyebrow::after { content: ""; display: inline-block; width: 16px; height: 16px; margin: 0 10px; vertical-align: -3px; background: var(--blossom) center / contain no-repeat; }
-.section-head .eyebrow::before { animation: twirl 6s linear infinite; }
-.section-head .eyebrow::after { animation: twirl 6s linear infinite reverse; }
-@keyframes twirl { to { transform: rotate(360deg); } }
-.range-card, .promise-card { background-image: var(--blossom); background-repeat: no-repeat; background-size: 26px; background-position: right 20px top 26px; }
-.promise-card.dark { background-color: var(--black); }
-.range-card::before { background: var(--pink-soft); }
-.range-card:hover { color: var(--black); box-shadow: 0 24px 40px rgba(229, 127, 156, 0.25); }
-.range-card:hover .range-kr { -webkit-text-stroke-color: rgba(229, 127, 156, 0.55); }
-.range-card:hover .range-icon { stroke: var(--pink-deep); }
-.range-card:hover::after { background-image: repeating-linear-gradient(90deg, var(--pink) 0 24px, var(--white) 24px 48px); }
-.trust-item:hover svg { stroke: var(--pink-deep); }
-.hero .hero-glow { background: radial-gradient(circle, rgba(247, 198, 211, 0.45), transparent 65%); }
-.band i, .promo-track b { color: var(--pink); }
-.launch-box::before, .launch-box::after {
-  content: ""; position: absolute; width: 46px; height: 46px; background: var(--blossom) center / contain no-repeat;
-  animation: twirl 8s linear infinite;
-}
-.launch-box { position: relative; }
-.launch-box::before { top: -22px; left: -22px; }
-.launch-box::after { bottom: -22px; right: -22px; animation-direction: reverse; }
-
-/* Cute animations: bouncy cards */
-@keyframes boing {
-  0% { transform: translateY(0); }
-  30% { transform: translateY(-14px) scale(1.02); }
-  50% { transform: translateY(-4px); }
-  70% { transform: translateY(-10px); }
-  100% { transform: translateY(-8px); }
-}
-.range-card:hover, .promise-card:hover, .contact-card:hover { animation: boing 0.7s var(--ease) both; }
-.btn:hover { transform: translateY(-3px) scale(1.03); }
-
-/* Sparkles and floating hearts around the girl */
-.sparkles i, .hearts i { position: absolute; z-index: 3; font-style: normal; pointer-events: none; }
-.sparkles i { color: var(--gold); font-size: 1.3rem; animation: twinkle 2.4s ease-in-out infinite; }
-.sparkles i:nth-child(1) { top: 8%; left: 30%; }
-.sparkles i:nth-child(2) { top: 22%; right: 6%; animation-delay: 0.5s; font-size: 1rem; }
-.sparkles i:nth-child(3) { top: 55%; right: 2%; animation-delay: 1s; color: var(--pink-deep); }
-.sparkles i:nth-child(4) { bottom: 12%; left: 22%; animation-delay: 1.5s; font-size: 0.9rem; }
-.sparkles i:nth-child(5) { top: 34%; left: 18%; animation-delay: 0.8s; color: var(--pink-deep); }
-@keyframes twinkle { 0%, 100% { transform: scale(0.4) rotate(0deg); opacity: 0.2; } 50% { transform: scale(1.2) rotate(30deg); opacity: 1; } }
-.hearts i { bottom: 18%; color: var(--pink); font-size: 1.1rem; opacity: 0; animation: heart-up 5s ease-in infinite; }
-.hearts i:nth-child(1) { left: 30%; }
-.hearts i:nth-child(2) { left: 62%; animation-delay: 1.3s; font-size: 0.9rem; }
-.hearts i:nth-child(3) { left: 46%; animation-delay: 2.6s; color: var(--pink-deep); }
-.hearts i:nth-child(4) { left: 74%; animation-delay: 3.8s; font-size: 1.3rem; }
-@keyframes heart-up {
-  0% { transform: translateY(0) scale(0.6); opacity: 0; }
-  15% { opacity: 0.9; }
-  100% { transform: translate(18px, -260px) scale(1.1); opacity: 0; }
-}
-
-/* Cute Korean stickers */
-.sticker {
-  position: absolute; z-index: 4; display: grid; place-items: center; text-align: center;
-  width: 76px; height: 76px; border-radius: 50%; padding: 6px;
-  font-size: 0.68rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.1;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), inset 0 0 0 3px rgba(255, 255, 255, 0.55);
-  animation: wobble 3.2s ease-in-out infinite;
-}
-.sticker[lang="ko"] { font-family: var(--font-kr); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: none; }
-.sticker-pink { background: var(--pink); color: var(--white); }
-.sticker-black { background: var(--black); color: var(--white); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 0 0 3px var(--pink); }
-.sticker-gold { background: radial-gradient(circle at 30% 25%, #f6e2b8, #c9a165 60%, #a8845a); color: var(--black); }
-@keyframes wobble { 0%, 100% { transform: rotate(var(--r, -8deg)); } 50% { transform: rotate(calc(var(--r, -8deg) * -1)) scale(1.05); } }
-.hero-art .s1 { --r: 10deg; right: 2%; top: 34%; }
-.hero-art .s2 { --r: -12deg; right: 6%; top: 64%; width: 62px; height: 62px; animation-delay: 0.6s; }
-.hero-art .s3 { --r: -10deg; left: 10%; top: 12%; width: 66px; height: 66px; animation-delay: 1.2s; }
-.section-head { position: relative; }
-.head-sticker { --r: 12deg; top: -70px; right: -4%; width: 84px; height: 84px; }
-
-/* Gold 100% authentic logo position on the restored home banner */
-.hero-art { position: relative; }
-
-@media (max-width: 720px) {
-  .sticker { width: 58px; height: 58px; font-size: 0.55rem; }
-  .sticker[lang="ko"] { font-size: 0.7rem; }
-  .hero-art .s2 { width: 50px; height: 50px; }
-  .hero-art .s3 { width: 52px; height: 52px; left: 4%; }
-  .head-sticker { width: 58px; height: 58px; top: -46px; right: 0; }
-}
