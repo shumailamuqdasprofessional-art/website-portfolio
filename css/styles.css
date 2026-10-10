@@ -578,3 +578,54 @@ h2 em { font-family: var(--font-head); font-style: italic; font-weight: 500; tex
 a.contact-card { color: inherit; }
 @media (max-width: 960px) { .contact-grid { grid-template-columns: repeat(2, 1fr); max-width: none; } }
 @media (max-width: 560px) { .contact-grid { grid-template-columns: 1fr; } }
+
+/* ==========================================================
+   Contact & Support: help cards
+   ========================================================== */
+.help-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.help-card { position: relative; border: 1.5px solid var(--black); padding: 46px 26px 30px; transition: opacity 0.9s var(--ease), transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+.help-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 10px; background: var(--stripe); }
+.help-card:hover { transform: translateY(-8px); box-shadow: 12px 12px 0 var(--black); }
+.help-card.dark { background: var(--black); color: var(--white); }
+.help-card.dark::before { background: repeating-linear-gradient(90deg, var(--white) 0 24px, var(--black) 24px 48px); }
+.help-card.dark:hover { box-shadow: 12px 12px 0 var(--gold); }
+.help-num { font-family: var(--font-head); font-style: italic; font-size: 2.2rem; color: var(--gold); line-height: 1; }
+.help-kr { margin-top: 12px; font-size: 0.85rem; color: var(--gold); }
+.help-card h3 { font-size: 1.05rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; margin: 6px 0 10px; }
+.help-card p:not(.help-kr) { color: var(--grey); font-size: 0.92rem; }
+.help-card.dark p:not(.help-kr) { color: #c9c9c9; }
+.help-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 44px; }
+.faq-section { background: var(--off); border-top: 1px solid var(--line); }
+.section-head p strong { color: var(--black); }
+
+/* ==========================================================
+   Journey page: story, milestones
+   ========================================================== */
+.story { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
+.story-text > p:not(.eyebrow) { color: var(--grey); margin-top: 16px; font-size: 1.02rem; }
+.story-text strong { color: var(--black); }
+.story-quote { position: relative; background: var(--black); color: var(--white); padding: 56px 40px 44px; text-align: center; box-shadow: 14px 14px 0 var(--gold); }
+.story-quote::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 10px; background: repeating-linear-gradient(90deg, var(--white) 0 24px, var(--black) 24px 48px); }
+.quote-kr { font-family: var(--font-kr); font-size: clamp(1.4rem, 3vw, 2rem); color: var(--gold-light); }
+.quote-en { font-family: var(--font-head); font-style: italic; font-size: clamp(1.6rem, 3.4vw, 2.4rem); margin: 8px 0 18px; }
+.story-quote span { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #9a9a9a; }
+
+.milestones { list-style: none; max-width: 760px; margin: 0 auto; position: relative; }
+.milestones::before { content: ""; position: absolute; left: 23px; top: 10px; bottom: 10px; width: 2px; background: repeating-linear-gradient(180deg, var(--black) 0 8px, transparent 8px 16px); }
+.milestones li { position: relative; display: flex; gap: 26px; align-items: flex-start; padding: 0 0 38px; }
+.ms-dot { position: relative; z-index: 1; flex: none; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--white); border: 2px solid var(--black); font-weight: 700; }
+.milestones li.done .ms-dot { background: var(--black); color: var(--gold-light); }
+.milestones li.now .ms-dot { background: var(--gold); border-color: var(--gold); color: var(--white); animation: ring 2.2s ease-out infinite; }
+.milestones h3 { font-size: 1.2rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; margin-top: 10px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.milestones p { color: var(--grey); margin-top: 6px; }
+.ms-tag { background: var(--gold); color: var(--white); font-size: 0.62rem; letter-spacing: 0.2em; padding: 4px 10px; }
+.values { background: var(--off); border-top: 1px solid var(--line); }
+
+@media (max-width: 960px) {
+  .help-grid { grid-template-columns: repeat(2, 1fr); }
+  .story { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 560px) {
+  .help-grid { grid-template-columns: 1fr; }
+  .story-quote { padding: 46px 24px 36px; box-shadow: 8px 8px 0 var(--gold); }
+}
