@@ -544,3 +544,8 @@ h2 em { font-family: var(--font-head); font-style: italic; font-weight: 500; tex
   .where-grid { grid-template-columns: 1fr; }
   .where-arrow { transform: rotate(90deg); justify-self: center; animation: none; }
 }
+
+/* Inner pages use the same banner as the home page, a little shorter */
+.hero-page .hero-grid { min-height: 0; padding: 70px 0 90px; }
+.hero-page .hero-art svg:not(.seal-ring) { max-width: 420px; }
+.hero-page .hero-sub strong { color: var(--black); }
