@@ -52,6 +52,13 @@ menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("open", open);
   menuBtn.setAttribute("aria-expanded", open);
 });
+mobileMenu.querySelectorAll("a").forEach((a) =>
+  a.addEventListener("click", () => {
+    mobileMenu.classList.remove("open");
+    menuBtn.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  })
+);
 
 // Subtle tilt on range cards following the mouse (desktop only)
 if (window.matchMedia("(hover: hover) and (prefers-reduced-motion: no-preference)").matches) {

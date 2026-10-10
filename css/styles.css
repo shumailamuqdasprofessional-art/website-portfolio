@@ -103,7 +103,7 @@ h2 em { font-family: var(--font-head); font-style: italic; font-weight: 500; tex
   animation: shimmer 4s linear infinite; padding-right: 0.1em;
 }
 @keyframes shimmer { from { background-position: 100% 0; } to { background-position: -150% 0; } }
-.hero-sub { font-size: 1.05rem; color: var(--grey); max-width: 520px; margin: 24px 0 30px; }
+.hero-sub { font-size: 1.05rem; color: var(--grey); max-width: 520px; margin: 22px 0 30px; }
 .hero-sub strong { color: var(--black); }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .soon-badge { display: inline-flex; align-items: center; gap: 10px; margin-top: 34px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; }
@@ -147,6 +147,15 @@ h2 em { font-family: var(--font-head); font-style: italic; font-weight: 500; tex
 }
 .seal-center b { font-size: 1.6rem; font-weight: 800; line-height: 1; color: var(--gold-light); }
 .seal-center span { font-size: 0.56rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
+
+/* Welcome points */
+.welcome-points { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.welcome-points li {
+  display: inline-flex; align-items: center; gap: 10px; background: var(--black); color: var(--white);
+  padding: 11px 18px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+}
+.welcome-points li::before { content: "✓"; color: var(--gold-light); }
+.welcome-points [lang="ko"] { font-size: 0.75rem; font-weight: 400; letter-spacing: 0.04em; text-transform: none; color: var(--gold-light); }
 
 /* Hero entrance */
 .intro { opacity: 0; transform: translateY(30px); transition: opacity 1s var(--ease), transform 1s var(--ease); transition-delay: var(--d, 0s); }
@@ -305,7 +314,7 @@ h2 em { font-family: var(--font-head); font-style: italic; font-weight: 500; tex
 @media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; min-height: 0; text-align: center; padding: 50px 0 90px; }
   .hero-sub { margin-inline: auto; }
-  .hero-actions { justify-content: center; }
+  .hero-actions, .welcome-points { justify-content: center; }
   .hero-art svg { max-width: 360px; }
   .seal { width: 112px; height: 112px; left: 0; bottom: 12%; }
   .seal-center { inset: 21px; }
@@ -325,6 +334,8 @@ h2 em { font-family: var(--font-head); font-style: italic; font-weight: 500; tex
   .nav { gap: 18px; }
   .nav a { font-size: 0.64rem; letter-spacing: 0.1em; }
   .header .nav-left { display: none; }
+  .welcome-points li { padding: 10px 12px; font-size: 0.64rem; letter-spacing: 0.08em; gap: 7px; white-space: nowrap; }
+  .welcome-points [lang="ko"] { font-size: 0.64rem; }
   .section, .journey { padding: 76px 0; }
   .trust-grid { grid-template-columns: 1fr; }
   .trust-item { border-left: 0; border-top: 1px solid var(--line); padding: 20px 4px; }
