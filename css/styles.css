@@ -550,3 +550,31 @@ h2 em { font-family: var(--font-head); font-style: italic; font-weight: 500; tex
 .hero-page .hero-art svg:not(.seal-ring) { max-width: 420px; }
 .hero-page .hero-sub strong { color: var(--black); }
 
+
+/* ==========================================================
+   Contact: phone & WhatsApp
+   ========================================================== */
+.btn svg, .footer-contact svg, .wa-float svg { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.btn svg { width: 17px; height: 17px; vertical-align: -3px; margin-right: 6px; }
+.btn-whatsapp { background: #25d366; border-color: #25d366; color: var(--white); }
+.btn-whatsapp:hover { background: transparent; color: #128c4a; border-color: #25d366; }
+.launch-contact { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
+.launch-number { font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 800; letter-spacing: 0.04em; margin-bottom: 16px; }
+.launch-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.footer-contact { display: flex; gap: 26px; flex-wrap: wrap; justify-content: center; }
+.footer-contact a { display: inline-flex; align-items: center; gap: 8px; color: var(--white); font-weight: 600; transition: color 0.3s; }
+.footer-contact a:hover { color: var(--gold-light); }
+.footer-contact svg { width: 18px; height: 18px; }
+.wa-float {
+  position: fixed; right: 20px; bottom: 20px; z-index: 60; width: 58px; height: 58px; border-radius: 50%;
+  display: grid; place-items: center; background: #25d366; color: var(--white);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25); transition: transform 0.3s var(--ease);
+}
+.wa-float:hover { transform: scale(1.08); }
+.wa-float::before { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25d366; animation: wa-ring 2s ease-out infinite; }
+@keyframes wa-ring { from { transform: scale(1); opacity: 0.8; } to { transform: scale(1.6); opacity: 0; } }
+.wa-float svg { width: 30px; height: 30px; }
+.contact-grid { grid-template-columns: repeat(4, 1fr); }
+a.contact-card { color: inherit; }
+@media (max-width: 960px) { .contact-grid { grid-template-columns: repeat(2, 1fr); max-width: none; } }
+@media (max-width: 560px) { .contact-grid { grid-template-columns: 1fr; } }
