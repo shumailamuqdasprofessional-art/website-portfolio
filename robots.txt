@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://skin-edit.ca/sitemap.xml
