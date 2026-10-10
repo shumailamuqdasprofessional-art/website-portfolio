@@ -629,3 +629,37 @@ a.contact-card { color: inherit; }
   .help-grid { grid-template-columns: 1fr; }
   .story-quote { padding: 46px 24px 36px; box-shadow: 8px 8px 0 var(--gold); }
 }
+
+/* ==========================================================
+   Promise page: 5 steps; gold seal on the Coming Soon banner
+   ========================================================== */
+.steps-list { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; counter-reset: s; }
+.steps-list li { position: relative; text-align: center; padding: 34px 16px 28px; border: 1px solid rgba(255, 255, 255, 0.22); }
+.steps-list li::after { content: "→"; position: absolute; right: -16px; top: 50%; transform: translateY(-50%); color: var(--gold-light); font-size: 1.1rem; z-index: 1; }
+.steps-list li:last-child::after { display: none; }
+.steps-list li.final { background: var(--gold); border-color: var(--gold); }
+.steps-list li.final .route-kr, .steps-list li.final p { color: var(--black); }
+.step-no { display: inline-grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; border: 2px solid var(--white); font-family: var(--font-head); font-style: italic; font-size: 1.3rem; }
+.steps-list li.final .step-no { border-color: var(--black); color: var(--black); }
+.steps-list h3 { font-size: 1.05rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; margin: 2px 0 8px; }
+.steps-list li.final h3 { color: var(--black); }
+.steps-list p:not(.route-kr) { color: #bdbdbd; font-size: 0.88rem; }
+.steps-list .route-kr { margin-top: 16px; font-size: 0.9rem; }
+
+.launch-box { position: relative; }
+.launch-box .seal-launch { left: auto; top: auto; right: -70px; bottom: -60px; width: 150px; height: 150px; }
+.launch-box .seal-launch .seal-center { inset: 27px; }
+.launch-box .seal-launch .seal-center b { font-size: 1.6rem; }
+
+@media (max-width: 960px) {
+  .steps-list { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; gap: 30px; }
+  .steps-list li::after { content: "↓"; right: 50%; top: auto; bottom: -26px; transform: translateX(50%); }
+}
+@media (max-width: 720px) {
+  .launch { overflow: hidden; }
+  .launch-box .seal-launch { right: -6px; bottom: -60px; width: 100px; height: 100px; }
+  .launch-box .seal-launch .seal-center { inset: 18px; }
+  .launch-box .seal-launch .seal-center b { font-size: 1.15rem; }
+  .launch-box .seal-launch .seal-center span { font-size: 0.42rem; }
+  .launch-box .seal-launch .seal-center i { display: none; }
+}
