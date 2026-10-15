@@ -609,3 +609,19 @@ p { max-width: 62ch; }
 /* page heroes on inner pages */
 .edit-hero + .section.tight, .edit-hero + .section { padding-top: clamp(28px, 4vw, 48px); }
 img { object-fit: cover; }
+
+/* ---------- Brand grid: always 3 and 3 ---------- */
+@media (max-width: 900px) { .brands { grid-template-columns: repeat(3, 1fr); gap: 10px; } }
+@media (max-width: 700px) {
+  .brand { padding-bottom: 16px; }
+  .brand-name { margin: 14px 8px 4px; font-size: 0.95rem; letter-spacing: 0.08em; }
+  .brand-name.skin1004 { letter-spacing: 0.26em; padding-left: 0.26em; font-size: 0.85rem; }
+  .brand-name.roundlab, .brand-name.cosrx { font-size: 0.85rem; }
+  .brand-name.roundlab .l2 { letter-spacing: 0.3em; padding-left: 0.3em; }
+  .brand-name.anua { font-size: 1.1rem; }
+  .brand-name.torriden { font-size: 1.05rem; }
+  .brand-name.boj { font-size: 0.68rem; letter-spacing: 0.12em; padding-left: 0.12em; }
+  .brand-name.boj .kr { font-size: 1.5em; }
+  .brand-tag { font-size: 0.88rem; }
+}
+@media (max-width: 520px) { .brands { grid-template-columns: repeat(3, 1fr); gap: 8px; } .brand-tag { font-size: 0.78rem; padding-inline: 4px; } }
