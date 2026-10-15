@@ -625,3 +625,22 @@ img { object-fit: cover; }
   .brand-tag { font-size: 0.88rem; }
 }
 @media (max-width: 520px) { .brands { grid-template-columns: repeat(3, 1fr); gap: 8px; } .brand-tag { font-size: 0.78rem; padding-inline: 4px; } }
+
+/* ---------- Skin-concern grid: always 3 and 3 ---------- */
+@media (max-width: 900px) {
+  .concerns { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .concern-visual { aspect-ratio: 1 / 0.8; }
+  .concern-visual .vk { font-size: 1.6rem; }
+  .concern-visual svg { width: 18px; height: 18px; right: 10px; bottom: 10px; }
+  .concern-body { padding: 14px 8px 16px; gap: 6px; }
+  .concern-body h2 { font-size: 1.05rem; }
+  .concern-body .ko { font-size: 0.72rem; }
+  .concern-body p { font-size: 0.74rem; line-height: 1.5; }
+  .concern-body .best-for { gap: 4px; }
+  .concern-body .best-for li { padding: 3px 7px; font-size: 0.66rem; }
+}
+@media (max-width: 520px) {
+  .concerns { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .concern-visual .vk { font-size: 1.3rem; }
+  .concern-body > p { display: none; }
+}
