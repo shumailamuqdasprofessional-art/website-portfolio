@@ -609,3 +609,8 @@ p { max-width: 62ch; }
 /* page heroes on inner pages */
 .edit-hero + .section.tight, .edit-hero + .section { padding-top: clamp(28px, 4vw, 48px); }
 img { object-fit: cover; }
+
+/* ---------- Photo quality: never stretch small photos ---------- */
+.brand-media { display: grid; place-items: center; background: #f6f4f0; }
+.brand-media img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+.edit-grid .brand-media img, .home-block .brand-media img { max-width: 92%; max-height: 92%; }
