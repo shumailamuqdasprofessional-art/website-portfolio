@@ -568,8 +568,8 @@ h2 em { font-family: var(--font-head); font-style: italic; font-weight: 500; tex
    ========================================================== */
 .btn svg, .footer-contact svg, .wa-float svg { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .btn svg { width: 17px; height: 17px; vertical-align: -3px; margin-right: 6px; }
-.btn-whatsapp { background: #25d366; border-color: #25d366; color: var(--white); }
-.btn-whatsapp:hover { background: transparent; color: #128c4a; border-color: #25d366; }
+.btn-whatsapp { background: #128c4a; border-color: #128c4a; color: var(--white); }
+.btn-whatsapp:hover { background: transparent; color: #128c4a; border-color: #128c4a; }
 .launch-contact { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
 .launch-number { font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 800; letter-spacing: 0.04em; margin-bottom: 16px; }
 .launch-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
@@ -678,3 +678,43 @@ a.contact-card { color: inherit; }
 
 /* Screen-reader only text */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* ==========================================================
+   Polish: launch updates, keyboard focus, readable gold, mobile
+   ========================================================== */
+:root { --gold-text: #86653e; } /* darker gold for small text: 4.5:1+ on white */
+.eyebrow, .range-num, .range-ko, .promise-num { color: var(--gold-text); }
+.promise-card.dark .promise-num { color: var(--gold-light); }
+.journey .eyebrow, .section-head.light .eyebrow, .page-hero .eyebrow, .cta-band .eyebrow { color: var(--gold-light); }
+.range-card:hover .range-num, .range-card:hover .range-ko { color: var(--gold-light); }
+
+.launch-note { font-weight: 600; margin-bottom: 16px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; }
+
+/* Visible keyboard focus everywhere */
+a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.btn:focus-visible { outline-offset: 4px; }
+.wa-float:focus-visible { outline-color: var(--black); }
+
+@media (max-width: 720px) {
+  /* Equal, full-width hero buttons */
+  .hero-actions { flex-direction: column; align-items: stretch; max-width: 340px; margin-inline: auto; }
+  /* Trust bar as a compact 2 x 2 grid */
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .trust-item { flex-direction: column; align-items: flex-start; gap: 10px; padding: 20px 12px; border-top: 1px solid var(--line); }
+  .trust-item:nth-child(-n+2) { border-top: 0; }
+  .trust-item:nth-child(even) { border-left: 1px solid var(--line); }
+  .trust-item svg { width: 28px; height: 28px; }
+  .trust-item strong { font-size: 0.72rem; }
+  .trust-item span { font-size: 0.78rem; }
+  /* Ranges two per row so the list is not endless on phones */
+  .range-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .range-card { padding: 26px 16px 18px; }
+  .range-icon { width: 32px; height: 32px; margin-bottom: 16px; }
+  .range-card h3 { font-size: 0.95rem; }
+  .range-ko { font-size: 0.8rem; }
+  .range-kr { font-size: 2.8rem; bottom: -6px; right: -4px; }
+  .range-soon { margin-top: 18px; padding: 6px 9px; font-size: 0.58rem; letter-spacing: 0.16em; }
+  .launch-actions .btn { width: 100%; padding: 14px 12px; letter-spacing: 0.1em; font-size: 0.72rem; white-space: nowrap; }
+  .wa-float { width: 54px; height: 54px; right: 16px; bottom: 16px; }
+}
