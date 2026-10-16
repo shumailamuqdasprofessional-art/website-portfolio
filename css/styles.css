@@ -645,3 +645,7 @@ img { object-fit: cover; }
   .concern-visual .vk { font-size: 1.3rem; }
   .concern-body > p { display: none; }
 }
+
+/* Homepage brands heading: small label and intro line */
+.edit-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 14px; }
+.home-block .edit-lead { max-width: 46em; margin-inline: auto; color: var(--ink-soft); }
