@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preload" href="fonts/cormorant-garamond-500-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="css/styles.css?v=20261016c" />
+  <link rel="stylesheet" href="css/styles.css?v=20261016d" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -50,88 +50,67 @@
   </nav>
 
   <main id="main">
-    <section class="edit-hero">
-      <div class="container">
-        <h1 class="edit-title">OUR STORY</h1>
-        <p class="edit-sub">From Korea To Your Shelf.</p>
-        <p class="edit-lead">The story of The Skin Edit: 100% authentic Korean beauty, from Korea, through Empress Beauty Box in Canada, to Pakistan.</p>
-        <p class="edit-note">Est. in Canada</p>
+    <section class="story-hero">
+      <img class="story-hero-img" src="images/story/hero.webp?v=1" alt="Three books labelled Korean Beauty, Canada and Pakistan beside a vase of blossoms" width="554" height="477" />
+      <div class="container story-hero-inner">
+        <p class="story-kicker">Our Story <span lang="ko">우리 이야기</span></p>
+        <h1 class="story-title">OUR STORY</h1>
+        <p class="story-lines"><span>Born in Canada.</span><span>Inspired by Korea.</span><span>Created for Pakistan.</span></p>
+        <p class="story-sign"><span>The Skin Edit</span><span>By Empress Beauty Box</span></p>
+        <p class="story-script">Love the<br /><span class="nowrap">Skin You're In <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" /></svg></span></p>
       </div>
     </section>
 
-    <section class="section" id="story">
-      <div class="container story">
-        <div class="story-text">
-          <p class="kicker"><span>Our story</span><span lang="ko">우리 이야기</span></p>
-          <h2>It started with trust.</h2>
-          <p>Empress Beauty Box began in Canada with one simple belief: everyone deserves skincare they can trust.</p>
-          <p>Korean skincare is loved all over the world, but finding the real thing isn't always easy. So we created <strong>The Skin Edit</strong>, a carefully edited selection of 100% authentic K-beauty, brought from Korea, through Canada, to Pakistan.</p>
-          <p>For the first time, Pakistan can shop genuine Korean skincare with total confidence.</p>
-        </div>
-        <figure class="quote">
-          <blockquote>
-            <p class="ko" lang="ko">“믿을 수 있는 아름다움”</p>
-            <p class="en">Beauty you can trust.</p>
-          </blockquote>
-          <cite>The Skin Edit by Empress Beauty Box</cite>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section ink">
+    <section class="story-journey">
       <div class="container">
-        <div class="section-head">
-          <p class="kicker"><span>The route</span><span lang="ko">여정</span></p>
-          <h2>Korea, Canada, Pakistan.</h2>
-        </div>
-        <ol class="route" style="--stops: 3">
-          <li class="stop">
-            <span class="stop-n">1</span>
-            <p class="ko" lang="ko">한국</p>
-            <h3>Korea</h3>
-            <p>Where K-beauty is born. Our Korean products are sourced from Korea, at the origin.</p>
+        <p class="story-kicker">The Journey <span lang="ko">우리의 여정</span></p>
+        <h2 class="story-h2">From a Vision to The Skin Edit.</h2>
+        <ol class="vision">
+          <li>
+            <span class="vision-n">01</span>
+            <span class="vision-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 2l1.6 3.4 1.9-.9-.5 4 2.6-2.4.7 1.7 2.7-.4-1.2 3 1.2.7-4.5 3.6.6 1.8-4.1-.6V21h-1v-5.1l-4.1.6.6-1.8L3.7 11.1l1.2-.7-1.2-3 2.7.4.7-1.7 2.6 2.4-.5-4 1.9.9z" /></svg></span>
+            <h3>Empress Beauty Box Canada</h3>
+            <p>Our foundation in Canada, built on professional skincare expertise and a passion for healthy, confident skin.</p>
           </li>
-          <li class="stop">
-            <span class="stop-n">2</span>
-            <p class="ko" lang="ko">캐나다</p>
-            <h3>Canada</h3>
-            <p>Every product goes through Empress Beauty Box in Canada, working only with 100% authentic sellers.</p>
+          <li>
+            <span class="vision-n">02</span>
+            <span class="vision-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M21 4.5c.6-.6.6-1.4 0-2s-1.4-.6-2 0l-4 4L4.5 3.6 3 5.1l8.3 4.4-4 4-2.8-.4L3.4 14.2l3.7 1.6 1.6 3.7 1.1-1.1-.4-2.8 4-4 4.4 8.3 1.5-1.5L16.5 8.5z" /></svg></span>
+            <h3>Inspired by Korea</h3>
+            <p>Korea's innovative skincare culture inspires our carefully selected, authentic products.</p>
           </li>
-          <li class="stop">
-            <span class="stop-n">3</span>
-            <p class="ko" lang="ko">파키스탄</p>
-            <h3>Pakistan</h3>
-            <p>Shipped straight from Canada to Pakistan, and to your shelf, for the first time.</p>
+          <li class="now">
+            <span class="vision-n">03</span>
+            <span class="vision-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9l1.5-5h13L20 9" /><path d="M4 9c0 1.4 1.1 2.5 2.7 2.5S9.3 10.4 9.3 9c0 1.4 1.2 2.5 2.7 2.5s2.7-1.1 2.7-2.5c0 1.4 1.1 2.5 2.6 2.5S20 10.4 20 9" /><path d="M5.5 11.3V20h13v-8.7" /><path d="M10 20v-5h4v5" /></svg></span>
+            <h3>The Skin Edit Pakistan</h3>
+            <p>Bringing a curated Korean skincare experience to Pakistan &mdash; in person, for real connections and real results.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="section">
+    <section class="story-values">
       <div class="container">
-        <div class="section-head">
-          <p class="kicker"><span>What's next</span><span lang="ko">다음 단계</span></p>
-          <h2>The road to launch.</h2>
-        </div>
-        <ol class="milestones">
-          <li class="ms done"><span class="ms-dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12.5l4 4 8-9" /></svg></span><div><h3>Empress Beauty Box, Canada</h3><p>Where it all began, with a promise of 100% authentic beauty.</p></div></li>
-          <li class="ms done"><span class="ms-dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12.5l4 4 8-9" /></svg></span><div><h3>The Skin Edit is born</h3><p>Six curated K-beauty ranges, chosen for every skin.</p></div></li>
-          <li class="ms now"><span class="ms-dot"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.5" /><path d="M12 9.5c-1.5-3-1-6 0-6.5 1 .5 1.5 3.5 0 6.5zM14.5 12c3-1.5 6-1 6.5 0-.5 1-3.5 1.5-6.5 0zM12 14.5c1.5 3 1 6 0 6.5-1-.5-1.5-3.5 0-6.5zM9.5 12c-3 1.5-6 1-6.5 0 .5-1 3.5-1.5 6.5 0z" /></svg></span><div><h3>Coming soon to Pakistan <span class="ms-tag">Now</span></h3><p>We're getting ready to bring The Skin Edit to Pakistan for the first time.</p></div></li>
-          <li class="ms"><span class="ms-dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" /></svg></span><div><h3>Your first order</h3><p>Real Korean skincare, delivered to you. We can't wait.</p></div></li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section tight">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker"><span>What we stand for</span><span lang="ko">우리의 약속</span></p>
-          <h2>Our values.</h2>
-        </div>
-        <div class="trio">
-          <div><p class="ko" lang="ko">100% 정품</p><h3>100% authentic</h3><p>Only genuine products from verified sellers. No copies, no fakes.</p></div>
-          <div><p class="ko" lang="ko">파키스탄을 위해</p><h3>Made for Pakistan</h3><p>Ranges chosen for real skin concerns, from dry skin to Pakistan's strong sun.</p></div>
-          <div><p class="ko" lang="ko">진심</p><h3>Real care</h3><p>We're here to help. Call or WhatsApp us any time at <a href="https://wa.me/16479825408" target="_blank" rel="noopener">+1 (647) 982-5408</a>.</p></div>
+        <p class="story-kicker small">What We Stand For <span lang="ko">우리의 약속</span></p>
+        <h2 class="story-h2">Our values.</h2>
+        <div class="values">
+          <div class="value">
+            <img src="images/story/authenticity.webp?v=1" alt="Golden dropper releasing a drop of serum" width="167" height="148" loading="lazy" />
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z" /></svg>
+            <h3>Authenticity</h3>
+            <p>Genuine Korean skincare sourced through trusted partners.</p>
+          </div>
+          <div class="value">
+            <img src="images/story/inclusivity.webp?v=1" alt="Swirl of soft pink cream" width="161" height="148" loading="lazy" />
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" /></svg>
+            <h3>Inclusivity</h3>
+            <p>We believe skincare should celebrate different skin types, concerns, and individual beauty.</p>
+          </div>
+          <div class="value">
+            <img src="images/story/expertise.webp?v=1" alt="Green leaf with water droplets" width="166" height="148" loading="lazy" />
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4l1.6 4.4L16 10l-4.4 1.6L10 16l-1.6-4.4L4 10l4.4-1.6z" /><path d="M17.5 3l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z" /><path d="M17 15l.6 1.4L19 17l-1.4.6L17 19l-.6-1.4L15 17l1.4-.6z" /></svg>
+            <h3>Expertise</h3>
+            <p>Our professional skincare background guides every thoughtfully selected product.</p>
+          </div>
         </div>
       </div>
     </section>
