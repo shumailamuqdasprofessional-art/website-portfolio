@@ -728,3 +728,12 @@ img { object-fit: cover; }
 .fact svg { width: clamp(22px, 1.8vw, 30px); height: clamp(22px, 1.8vw, 30px); }
 .fact strong { font-size: clamp(0.68rem, 0.8vw, 0.86rem); }
 .fact span { font-size: clamp(1.1rem, 1.3vw, 1.45rem); }
+
+/* Wide screens (big monitors, zoomed-out browsers): scale the whole page up
+   so it fills the screen like it does on a normal laptop */
+@media (min-width: 1600px) { body { zoom: 1.1; } }
+@media (min-width: 1800px) { body { zoom: 1.25; } }
+@media (min-width: 2000px) { body { zoom: 1.4; } }
+@media (min-width: 2300px) { body { zoom: 1.6; } }
+@media (min-width: 2700px) { body { zoom: 1.85; } }
+@media (min-width: 3200px) { body { zoom: 2.2; } }
