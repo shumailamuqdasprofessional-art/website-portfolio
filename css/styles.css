@@ -827,3 +827,17 @@ img { object-fit: cover; }
 @media (max-width: 900px) { .cp-feature.cp-slider { aspect-ratio: 4 / 3; } }
 @media (max-width: 640px) { .cp-products { grid-template-columns: 1fr; } .cp-img img { object-fit: contain; background: #fff; } }
 .cp-slide.grey { background: linear-gradient(180deg, #5f5c5c, #9a9796 50%, #5f5c5c); } .cp-slide.grey img { padding: 0; }
+
+/* Brightening panel: simple numbered Centella slideshow */
+.cp-inner.cp-simple { display: grid; grid-template-columns: 1fr; justify-items: center; gap: 10px; padding: clamp(28px, 4vw, 48px) clamp(16px, 3vw, 40px); text-align: center; }
+.cp-simple .cp-eyebrow { justify-content: center; flex-wrap: wrap; }
+.cp-simple .cp-title { padding: 0 44px; }
+.cp-simple .cp-slider { position: relative; width: min(100%, 680px); aspect-ratio: 1 / 1; margin-top: 10px; background: #fff; border: 1px solid var(--line); overflow: hidden; }
+.cp-simple .cp-track { position: absolute; inset: 0; }
+.cp-simple .cp-slide img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.cp-cap { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 1; white-space: nowrap; background: rgba(255,255,255,0.92); border: 1px solid var(--line); padding: 4px 14px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+.cp-dots.cp-nums { position: static; margin-top: 6px; gap: 10px; }
+.cp-nums button { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font: 600 0.9rem var(--font-body); }
+.cp-nums button[aria-current="true"] { width: 38px; border-radius: 50%; background: var(--ink); color: var(--paper); }
+@media (max-width: 520px) { .cp-cap { font-size: 0.6rem; letter-spacing: 0.08em; } }
+.cp-simple .cp-eyebrow { padding: 0 44px; }

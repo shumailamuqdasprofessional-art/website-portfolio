@@ -72,11 +72,12 @@ document.querySelectorAll(".concern[data-panel]").forEach((card) => {
 document.querySelectorAll(".cp-slider").forEach((slider) => {
   const track = slider.querySelector(".cp-track");
   const slides = [...track.children];
-  const dots = [...slider.querySelectorAll(".cp-dots button")];
+  const dots = [...(slider.parentElement.querySelectorAll(".cp-dots button"))];
   let index = 0, timer;
   const go = (i) => {
     index = (i + slides.length) % slides.length;
     track.scrollTo({ left: track.clientWidth * index });
+    mark();
   };
   const mark = () => dots.forEach((d, i) => d.setAttribute("aria-current", String(i === index)));
   track.addEventListener("scroll", () => { index = Math.round(track.scrollLeft / track.clientWidth); mark(); }, { passive: true });
