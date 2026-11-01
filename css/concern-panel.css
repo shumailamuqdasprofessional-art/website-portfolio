@@ -103,3 +103,9 @@
 .brightening-page .actions { margin-top: 28px; }
 .bp-photo { width: min(100%, 620px); margin: 0 auto; }
 .bp-photo img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.bp-lines { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 32px); max-width: 1040px; margin: 0 auto; }
+.bp-line { margin: 0; display: grid; gap: 14px; }
+.bp-line img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.bp-line figcaption { text-align: center; font-family: var(--font-display); font-weight: 600; font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height: 1.2; }
+.bp-line figcaption span { display: block; font-family: var(--font-body); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.22em; color: var(--gold); margin-bottom: 4px; }
+@media (max-width: 700px) { .bp-lines { grid-template-columns: 1fr; } }
